@@ -12,7 +12,7 @@ class Attendance {
     this.name = name;
     this.record = [];
   }
-
+  // create a method called addrecord that will take record and it is an instance of Employee class.and throw exception error
   addRecord(record) {
     if (record instanceof Employee) {
       this.record.push(record);
@@ -125,7 +125,10 @@ class Menu {
         case "2":
           this.deleteExistingAttendanceRecord();
           break;
+        default:
+          selected = 0;
       }
+      selection = this.showSupervisorMenuOptions();
     }
   }
 
